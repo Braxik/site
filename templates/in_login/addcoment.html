@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="static/css/style.css">
+
+		<!-- STYLE CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/mbr-additional.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+		<link rel="stylesheet" href="static/css/regstyle.css"/>
+	</head>
+
+	<body>
+      <section class="menu menu1 cid-suDTyNTPTU" once="menu" id="menu1-2">
+
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="http://127.0.0.1:8080"><img src="https://x-lines.ru/letters/i/cyrillicscript/0476/ffffff/26/0/eisgaamrcr.png">
+</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true" id="nnavv">
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="http://127.0.0.1:8080">
+                            About Crete</a>
+                        <ul>
+                            <li><a class="text-black display-4" href="/top">Достопримечательности</a></li>
+                            <li><a class="text-black display-4" href="/avia">Купить билеты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="http://127.0.0.1:8080/logout">
+                            Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+	<div class="wrapper">
+        <table>
+        <tr>
+        <th>
+		<form action="" method="post">
+		{{ form.hidden_tag() }}
+            <h3>Comment</h3>
+			<div class="inner">
+				<form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.content.label }}<br>
+            {{ form.content(class="form-control") }}<br>
+            {% for error in form.content.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+            {{message}}
+        </th>
+
+        </tr>
+    </form>
+    </table>
+
+        <img src="/static/images/sky.jpg" alt="" class="image-2">
+		<script src="/static/js/jquery-3.3.1.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
